@@ -1,11 +1,17 @@
 // player input
 
+
+/*
 key_left = keyboard_check(vk_left);
 key_right = keyboard_check(vk_right);
 key_jump = keyboard_check_pressed(vk_space);
-key_down = keyboard_check_pressed(vk_down);
+key_down = keyboard_check(vk_down);
+*/
 
-
+key_left = keyboard_check(vk_left) || keyboard_check(ord("Q"))
+key_right = keyboard_check(vk_right) || keyboard_check(ord("D"))
+key_jump = keyboard_check_pressed(vk_space) || keyboard_check_pressed(ord("Z"));
+key_down = keyboard_check(vk_down) || keyboard_check(ord("S"));
 
 //calc moovment
 var move = key_right - key_left;
@@ -27,29 +33,39 @@ if (place_meeting(x + hsp, y, oWall))
 x = x + hsp;
 
 
-//collision (v)
-if (place_meeting(x , y + vsp,oWall))
-{
-	while(!place_meeting(x, y + sign(vsp), oWall))
-	{
-		y = y + sign(vsp);	
-	}
-	vsp = 0;
-}
 
-y = y + vsp;
 
 
 //jump
+
+/*
+old jump mecanic: 
+
 if(place_meeting(x, y+1, oWall)) && (key_jump) {
 
 	vsp = vsp - 13;
 }
+*/
+
+// new jump mecanic
+
+if(jumping_state == JUMPING_STATE.GROUNDED && (key_jump)){
+	jumping_state = JUMPING_STATE.JUMPING;
+	jumping_frame = 0;
+}
+
 
 //fast fall
+/*
 if(!place_meeting(x, y+1, oWall)) && (key_down) && (sign(vsp) > 0){
-	vsp = vsp + 0.69;
+	jumping_state = JUMPING_STATE.FAST_FALLING;
 }
+*/
+if ((jumping_state == JUMPING_STATE.FALLING) && (key_down)){
+	jumping_state = JUMPING_STATE.FAST_FALLING;
+}
+
+
 
 
 //animations
@@ -71,3 +87,5 @@ else{
 		
 	}
 }
+
+
