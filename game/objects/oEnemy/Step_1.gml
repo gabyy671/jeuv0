@@ -13,16 +13,16 @@ if (place_meeting(x, y - 2, oWall)) {
         jumping_frame = 0;
     }
 }
+
 // Collision avec le sol
+
 if (place_meeting(x, y + 1, oWall)) {
-    while (!place_meeting(x, y + 1, oWall)) {
-        y += 1;    
+    while (place_meeting(x, y + 1, oWall)) {
+        y -= 1;    
     }
     vsp = 0;
     jumping_state = JUMPING_STATE.GROUNDED;
-}
-
-else {
+} else {
     if (jumping_state != JUMPING_STATE.JUMPING) {
         jumping_state = JUMPING_STATE.FALLING;
     }
