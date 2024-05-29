@@ -1,9 +1,31 @@
 /// @description Insert description here
+// You can write your code in this editor
+
+/// @description Insert description here
 // Collision (v)
 // Collision avec le plafond
 
 
-if (place_meeting(x, y - 2, oWall)) {
+if (hp<=0){
+	
+	with(instance_create_layer(x, y, layer, oDead)){
+		
+		direction = other.hitfrom;
+		hsp = lengthdir_x(3, direction);
+		vsp = lengthdir_y(3, direction);
+		
+		if (sign(hsp) !=0 ) image_xscale = sign(hsp);
+		
+	}
+	
+	instance_destroy();
+	
+	
+	
+}
+
+
+if (place_meeting(x, y - 1, oWall)) {
     while (!place_meeting(x, y - 1, oWall)) {
         y -= 1;    
     }
@@ -17,7 +39,7 @@ if (place_meeting(x, y - 2, oWall)) {
 // Collision avec le sol
 
 if (place_meeting(x, y + 1, oWall)) {
-    while (place_meeting(x, y + 1, oWall)) {
+    while (place_meeting(x, y, oWall)) {
         y -= 1;    
     }
     vsp = 0;

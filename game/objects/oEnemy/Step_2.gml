@@ -1,4 +1,7 @@
+/// @description Insert description here
+// You can write your code in this editor
 switch (jumping_state) {
+	
     case JUMPING_STATE.GROUNDED:
         // Code pour l'état au sol
         break;
@@ -26,19 +29,15 @@ switch (jumping_state) {
         if (!place_meeting(x, y + falling_speed, oWall)) {
             y += falling_speed;
         } else {
-            while (!place_meeting(x, y + 2, oWall)) {
+            while (!place_meeting(x, y + 1, oWall)) {
                 y += 1;
             }
             jumping_state = JUMPING_STATE.GROUNDED;
         }
         break;
 
-    case JUMPING_STATE.TOP:
-        if (jumping_frame < 4) {
-            jumping_frame += 1;
-        } else {
-            jumping_state = JUMPING_STATE.FALLING;
-            jumping_frame = 0;
-        }
-        break;
+}
+
+if (flash > 0){
+flash -=1;	
 }

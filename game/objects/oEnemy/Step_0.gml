@@ -1,8 +1,6 @@
 
 
 //calc moovment
-var move = 0;
-hsp = move * walksp;
 
 vsp = vsp + grv;
 
@@ -14,7 +12,7 @@ if (place_meeting(x + hsp, y, oWall))
 	{
 		x = x + sign(hsp);	
 	}
-	hsp = 0;
+	hsp = -hsp;
 }
 
 x = x + hsp;
@@ -64,6 +62,8 @@ else{
 	}
 }
 
+/*
 if (jumping_frame == 0){
 	sprite_index = sEnemy;
 }
+*/
