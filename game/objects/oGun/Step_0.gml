@@ -1,7 +1,7 @@
-/// @description Insert description here
+/// firing
 // You can write your code in this editor
 
-if (mouse_check_button(mb_left)  && (firing_delay < 0)) {
+if ((mouse_check_button(mb_left) || gamepad_button_check(0, gp_shoulderlb))  && (firing_delay < 0)) {
 	
 	with(instance_create_layer(x, y, "Bullets", oBullet)){
 		

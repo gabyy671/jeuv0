@@ -16,3 +16,5 @@ grv = 0.6;
 walksp = 6;
 jumping_speed = 8;
 falling_speed = 8;
+
+controller = 0;
