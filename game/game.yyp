@@ -40,8 +40,11 @@
     {"id":{"name":"oEnemy","path":"objects/oEnemy/oEnemy.yy",},},
     {"id":{"name":"oGun","path":"objects/oGun/oGun.yy",},},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
+    {"id":{"name":"oTransition","path":"objects/oTransition/oTransition.yy",},},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},},
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"rOne","path":"rooms/rOne/rOne.yy",},},
+    {"id":{"name":"rTwo","path":"rooms/rTwo/rTwo.yy",},},
+    {"id":{"name":"SlideTransition","path":"scripts/SlideTransition/SlideTransition.yy",},},
     {"id":{"name":"shWhite","path":"shaders/shWhite/shWhite.yy",},},
     {"id":{"name":"sBullet","path":"sprites/sBullet/sBullet.yy",},},
     {"id":{"name":"sEnemy","path":"sprites/sEnemy/sEnemy.yy",},},
@@ -59,7 +62,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"rOne","path":"rooms/rOne/rOne.yy",},},
+    {"roomId":{"name":"rTwo","path":"rooms/rTwo/rTwo.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
