@@ -9,7 +9,7 @@ with (oTransition){
 	if (argument_count > 1) target = argument[1];
 }
 */
-function SlideTransition(argument0, argument1)
+function SlideTransition(_Mode, _Target)
 
 {
 
@@ -17,9 +17,9 @@ function SlideTransition(argument0, argument1)
 
 	{
 
-		mode = argument[0];
+		mode = _Mode;
 
-		if(argument_count > 1) target = argument[1];
+		if(argument_count > 1) target = _Target;
 
 	}
 

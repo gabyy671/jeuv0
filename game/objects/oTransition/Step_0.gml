@@ -2,16 +2,17 @@
 // You can write your code in this editor
 
 if (mode != TRANS_MOD.OFF){
+	
 	if(mode == TRANS_MOD.INTRO){
-		percent = max(0, percent - max((percent/10), 0.005));	
+		percent = max(0,percent - max((percent/10), 0.005));	
 	}
 	
 	else{
-		percent = min(1, percent + min(((1-percent)/10), 0.005));
+		percent = min(1.05, percent + max(((1.05-percent)/10), 0.005));
 	}
 	
 	
-	if (percent == 1) || (percent ==0){
+	if (percent == 1.05) || (percent == 0){
 		
 		switch(mode){
 		

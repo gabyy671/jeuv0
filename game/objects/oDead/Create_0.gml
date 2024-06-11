@@ -6,3 +6,4 @@ done = 0;
 
 image_speed = 0;
 
+ScreenShake(8, 20);

@@ -7,32 +7,45 @@ key_right = keyboard_check(vk_right);
 key_jump = keyboard_check_pressed(vk_space);
 key_down = keyboard_check(vk_down);
 */
-
-key_left = keyboard_check(vk_left) || keyboard_check(ord("Q"))
-key_right = keyboard_check(vk_right) || keyboard_check(ord("D"))
-key_jump = keyboard_check_pressed(vk_space) || keyboard_check_pressed(ord("Z"));
-key_down = keyboard_check(vk_down) || keyboard_check(ord("S"));
-
-
-if (key_left) || (key_right) || (key_jump) || (key_down) {
-	controller = 0;	
-}
+if(hascontrol){
+	key_left = keyboard_check(vk_left) || keyboard_check(ord("Q"))
+	key_right = keyboard_check(vk_right) || keyboard_check(ord("D"))
+	key_jump = keyboard_check_pressed(vk_space) || keyboard_check_pressed(ord("Z")) || keyboard_check_pressed(vk_up);
+	key_down = keyboard_check(vk_down) || keyboard_check(ord("S"));
 
 
-//controlleur movments
-if (abs(gamepad_axis_value(0, gp_axislh)) > 0.1){
+	if (key_left) || (key_right) || (key_jump) || (key_down) {
+		controller = 0;	
+	}
+
+
+	//controlleur movments
+	if (abs(gamepad_axis_value(0, gp_axislh)) > 0.1){
 	
-	key_left = abs(min(gamepad_axis_value(0, gp_axislh), 0));
-	key_right = max(gamepad_axis_value(0, gp_axislh), 0);
-	controller = 1;
+		key_left = abs(min(gamepad_axis_value(0, gp_axislh), 0));
+		key_right = max(gamepad_axis_value(0, gp_axislh), 0);
+		controller = 1;
+	}
+	if (gamepad_axis_value(0, gp_axislv) > 0.1){
+		key_jump = 1;
+	}
+	else if (gamepad_axis_value(0, gp_axislv) < -0.1){
+		key_down = 1;
+	}
+/*
+	if (gamepad_button_check(0, gp_face3)){
+		key_jump = 1;
+		controller = 1;
+	}
+	*/
 }
-
-if (gamepad_button_check(0, gp_face3)){
-	key_jump = 1;
-	controller = 1;
+else {
+	key_down = 0;
+	key_jump = 0;
+	key_left = 0;
+	key_right = 0;
 }
-
-//calc moovment
+	//calc moovment
 
 // var = portée locale
 
