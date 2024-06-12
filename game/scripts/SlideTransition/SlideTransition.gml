@@ -20,7 +20,7 @@ function SlideTransition(_Mode, _Target)
 		mode = _Mode;
 
 		if(argument_count > 1) target = _Target;
-
+		
 	}
-
+	
 }

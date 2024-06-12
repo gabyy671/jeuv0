@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+/*
 jumping_state = JUMPING_STATE.FALLING;
 
 jumping_frame = 0;
@@ -18,3 +19,4 @@ hp = 4;
 
 hitfrom = 0;
 hsp = walksp;
+*/

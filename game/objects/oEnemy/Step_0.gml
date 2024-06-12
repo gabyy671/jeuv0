@@ -57,8 +57,6 @@ else{
 	else
 	{
 		sprite_index = sEnemyR;
-		image_xscale = sign(hsp);
-		
 	}
 }
 
