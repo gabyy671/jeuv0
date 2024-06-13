@@ -52,7 +52,7 @@ else {
 var move = key_right - key_left;
 hsp = move * walksp;
 
-vsp = vsp + grv;
+//vsp = vsp + grv;
 
 
 // checking for collision (h)
