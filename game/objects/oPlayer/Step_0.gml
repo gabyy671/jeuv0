@@ -12,9 +12,10 @@ if(hascontrol){
 	key_right = keyboard_check(vk_right) || keyboard_check(ord("D"))
 	key_jump = keyboard_check_pressed(vk_space) || keyboard_check_pressed(ord("Z")) || keyboard_check_pressed(vk_up);
 	key_down = keyboard_check(vk_down) || keyboard_check(ord("S"));
-
+	key_action = keyboard_check(ord("E"));
 
 	if (key_left) || (key_right) || (key_jump) || (key_down) {
+		keyboard = 1;
 		controller = 0;	
 	}
 
@@ -32,6 +33,10 @@ if(hascontrol){
 	else if (gamepad_axis_value(0, gp_axislv) > 0.1){
 		key_down = 1;
 	}
+	
+	if (gamepad_button_check(0, gp_face3)){
+	key_action = 1;
+	}
 /*
 	if (gamepad_button_check(0, gp_face3)){
 		key_jump = 1;
@@ -44,6 +49,7 @@ else {
 	key_jump = 0;
 	key_left = 0;
 	key_right = 0;
+	key_action = 0;
 }
 	//calc moovment
 
@@ -51,8 +57,6 @@ else {
 
 var move = key_right - key_left;
 hsp = move * walksp;
-
-//vsp = vsp + grv;
 
 
 // checking for collision (h)
