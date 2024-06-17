@@ -1,12 +1,23 @@
-
-
 //calc moovment
 
-vsp = vsp + grv;
+// dont walk of edge
+if (grounded) && (afraid_of_heights) && (!place_meeting(x+hsp, y+1, oWall)){
+	hsp = -hsp;
+}
+
 
 
 // checking for collision (h)
-if (place_meeting(x + hsp, y, oWall))
+if place_meeting(x + hsp, y, oTransition)
+{
+	while(!place_meeting(x + sign(hsp), y ,oTransition))
+	{
+		x = x + sign(hsp);
+	}
+	hsp = -hsp;
+}
+
+if place_meeting(x + hsp, y, oWall)
 {
 	while(!place_meeting(x + sign(hsp), y ,oWall))
 	{

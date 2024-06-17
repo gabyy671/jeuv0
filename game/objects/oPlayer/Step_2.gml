@@ -1,6 +1,6 @@
 switch (jumping_state) {
     case JUMPING_STATE.GROUNDED:
-        // Code pour l'état au sol
+		can_jump = 10;
         break;
 
     case JUMPING_STATE.JUMPING:

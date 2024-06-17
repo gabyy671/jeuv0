@@ -25,7 +25,7 @@ if (hp<=0){
 	
 }
 
-
+//collision plafond
 if (place_meeting(x, y - 1, oWall)) {
     while (!place_meeting(x, y - 1, oWall)) {
         y -= 1;    

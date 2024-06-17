@@ -13,8 +13,6 @@ if (instance_exists(oPlayer)){
 			with(oCamera){
 				follow = other.id;	
 			}
-		
-		}
-		
+		}		
 	}
 }

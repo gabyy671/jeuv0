@@ -20,3 +20,5 @@ falling_speed = 8;
 controller = 0;
 keyboard = 0;
 hascontrol = true;
+
+can_jump = 0;

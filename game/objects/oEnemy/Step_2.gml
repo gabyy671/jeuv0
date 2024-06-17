@@ -3,7 +3,7 @@
 switch (jumping_state) {
 	
     case JUMPING_STATE.GROUNDED:
-        // Code pour l'état au sol
+        grounded = true;
         break;
 
     case JUMPING_STATE.JUMPING:
@@ -25,7 +25,7 @@ switch (jumping_state) {
         break;
 
     case JUMPING_STATE.FALLING:
-        // Code pour l'état de chute
+		grounded = false;
         if (!place_meeting(x, y + falling_speed, oWall)) {
             y += falling_speed;
         } else {

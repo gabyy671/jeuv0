@@ -30,7 +30,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.600.0.575",
+    "IDEVersion":"2024.600.0.576",
   },
   "name":"game",
   "resources":[
@@ -72,6 +72,7 @@
     {"id":{"name":"sPlayerR","path":"sprites/sPlayerR/sPlayerR.yy",},},
     {"id":{"name":"sSign","path":"sprites/sSign/sSign.yy",},},
     {"id":{"name":"sTiles","path":"sprites/sTiles/sTiles.yy",},},
+    {"id":{"name":"sTitle","path":"sprites/sTitle/sTitle.yy",},},
     {"id":{"name":"sTrigger","path":"sprites/sTrigger/sTrigger.yy",},},
     {"id":{"name":"sWall","path":"sprites/sWall/sWall.yy",},},
     {"id":{"name":"tTiles","path":"tilesets/tTiles/tTiles.yy",},},

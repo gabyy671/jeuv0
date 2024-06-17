@@ -48,6 +48,7 @@
     {"name":"sPlayerR","order":2,"path":"sprites/sPlayerR/sPlayerR.yy",},
     {"name":"sSign","order":16,"path":"sprites/sSign/sSign.yy",},
     {"name":"sTiles","order":10,"path":"sprites/sTiles/sTiles.yy",},
+    {"name":"sTitle","order":17,"path":"sprites/sTitle/sTitle.yy",},
     {"name":"sTrigger","order":11,"path":"sprites/sTrigger/sTrigger.yy",},
     {"name":"sWall","order":1,"path":"sprites/sWall/sWall.yy",},
   ],

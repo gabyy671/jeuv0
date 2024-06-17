@@ -1,6 +1,7 @@
 // player input
 
 
+
 /*
 key_left = keyboard_check(vk_left);
 key_right = keyboard_check(vk_right);
@@ -87,10 +88,11 @@ if(place_meeting(x, y+1, oWall)) && (key_jump) {
 */
 
 // new jump mecanic
-
-if(jumping_state == JUMPING_STATE.GROUNDED && (key_jump)){
+can_jump --;
+if(can_jump) && (key_jump){
 	jumping_state = JUMPING_STATE.JUMPING;
 	jumping_frame = 0;
+	can_jump = 0;
 }
 
 
