@@ -10,9 +10,12 @@ if ((mouse_check_button(mb_left) || gamepad_button_check(0, gp_shoulderlb))  && 
 	
 	with(instance_create_layer(x, y, "Bullets", oBullet)){
 		
-		speed = 25;
+		spd = 25;
 		direction = other.image_angle + random_range(-3, 3);
 		image_angle = direction;
+		
+		x += lengthdir_x(spd, direction);
+		y += lengthdir_y(spd, direction);
 	}
 }
 

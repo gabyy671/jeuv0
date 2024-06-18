@@ -1,4 +1,4 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-//text =  "hellow rold";
+y = ystart + sin(get_timer()/500000)*5;

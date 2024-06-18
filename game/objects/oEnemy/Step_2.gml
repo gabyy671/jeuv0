@@ -38,6 +38,3 @@ switch (jumping_state) {
 
 }
 
-if (flash > 0){
-flash -=1;	
-}

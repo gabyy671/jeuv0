@@ -1,1 +1,0 @@
-text = "escort the princess\n to the final level"

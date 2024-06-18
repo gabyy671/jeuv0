@@ -4,7 +4,11 @@ switch (jumping_state) {
         break;
 
     case JUMPING_STATE.JUMPING:
-        // Code pour l'état de saut
+	
+		sprite_index = sPlayerA;
+		image_speed = 0;
+		image_index = 0;
+		
         if (jumping_frame < 20) {
             if (!place_meeting(x, y - jumping_speed, oWall)) {
                 y -= jumping_speed;
@@ -21,6 +25,11 @@ switch (jumping_state) {
         break;
 
     case JUMPING_STATE.FALLING:
+	
+		sprite_index = sPlayerA;
+		image_speed = 0;
+		image_index = 1;
+		
         // Code pour l'état de chute
         if (!place_meeting(x, y + falling_speed, oWall)) {
             y += falling_speed;
@@ -37,6 +46,7 @@ switch (jumping_state) {
             jumping_frame += 1;
         } else {
             jumping_state = JUMPING_STATE.FALLING;
+			
             jumping_frame = 0;
         }
         break;
