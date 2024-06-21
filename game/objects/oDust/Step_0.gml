@@ -1,11 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-// Inherit the parent event
+x+=hsp;
+y+=vsp;
 
-/*
-event_inherited();
-
-hp = 10;
-size = 2;
-*/
+hsp*=0.9;
+vsp*=0.9;

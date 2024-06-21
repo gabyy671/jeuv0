@@ -12,7 +12,7 @@ if(hascontrol){
 	key_left = keyboard_check(vk_left) || keyboard_check(ord("Q"))
 	key_right = keyboard_check(vk_right) || keyboard_check(ord("D"))
 	key_jump = keyboard_check_pressed(vk_space) || keyboard_check_pressed(ord("Z")) || keyboard_check_pressed(vk_up);
-	key_down = keyboard_check(vk_down) || keyboard_check(ord("S"));
+	key_down = keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S"));
 	key_action = keyboard_check(ord("E"));
 
 	if (key_left) || (key_right) || (key_jump) || (key_down) {
@@ -59,6 +59,11 @@ else {
 var move = key_right - key_left;
 hsp = move * walksp;
 
+dustCd --;
+if (hsp != 0) && (dustCd < 0) && (jumping_state == JUMPING_STATE.GROUNDED){
+	instance_create_layer(x, bbox_bottom, "Bullets", oDust);
+	dustCd = 6;
+}
 
 // checking for collision (h)
 if (place_meeting(x + hsp, y, oWall))

@@ -22,3 +22,4 @@ keyboard = 0;
 hascontrol = true;
 
 can_jump = 0;
+dustCd = 0;

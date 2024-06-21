@@ -1,3 +1,7 @@
+if (!place_meeting(x, y + 1, oWall)) && (jumping_state == JUMPING_STATE.GROUNDED){
+	jumping_state = JUMPING_STATE.FALLING;
+}
+
 switch (jumping_state) {
     case JUMPING_STATE.GROUNDED:
 		can_jump = 10;
@@ -9,12 +13,14 @@ switch (jumping_state) {
 		image_speed = 0;
 		image_index = 0;
 		
-        if (jumping_frame < 20) {
+        if (jumping_frame < 15) {
             if (!place_meeting(x, y - jumping_speed, oWall)) {
                 y -= jumping_speed;
                 jumping_frame += 1;
             } else {
-                // Si on touche le plafond, arrêter le saut
+                while(!place_meeting(x, y - 1, oWall)){
+					y --;
+				}
                 jumping_state = JUMPING_STATE.FALLING;
                 jumping_frame = 0;
             }
@@ -37,12 +43,18 @@ switch (jumping_state) {
             while (!place_meeting(x, y + 1, oWall)) {
                 y += 1;
             }
+
             jumping_state = JUMPING_STATE.GROUNDED;
+			repeat(5){			//bbox means collision box
+				with(instance_create_layer(x, bbox_bottom, "Bullets", oDust)) {
+					vsp = 0;
+				}
+			}
         }
         break;
 
     case JUMPING_STATE.TOP:
-        if (jumping_frame < 4) {
+        if (jumping_frame < 2) {
             jumping_frame += 1;
         } else {
             jumping_state = JUMPING_STATE.FALLING;
@@ -59,6 +71,11 @@ switch (jumping_state) {
                 y += 1;
             }
             jumping_state = JUMPING_STATE.GROUNDED;
+			repeat(5){			//bbox means collision box
+				with(instance_create_layer(x, bbox_bottom, "Bullets", oDust)) {
+					vsp = 0;
+				}
+			}
         }
         break;
 }

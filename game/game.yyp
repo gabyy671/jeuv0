@@ -30,7 +30,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.600.0.576",
+    "IDEVersion":"2024.600.0.579",
   },
   "name":"game",
   "resources":[
@@ -40,6 +40,7 @@
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},},
     {"id":{"name":"oCrate","path":"objects/oCrate/oCrate.yy",},},
     {"id":{"name":"oDead","path":"objects/oDead/oDead.yy",},},
+    {"id":{"name":"oDust","path":"objects/oDust/oDust.yy",},},
     {"id":{"name":"oEnemy","path":"objects/oEnemy/oEnemy.yy",},},
     {"id":{"name":"oEnemyBig","path":"objects/oEnemyBig/oEnemyBig.yy",},},
     {"id":{"name":"oGun","path":"objects/oGun/oGun.yy",},},
@@ -65,6 +66,7 @@
     {"id":{"name":"sBgTrees","path":"sprites/sBgTrees/sBgTrees.yy",},},
     {"id":{"name":"sBullet","path":"sprites/sBullet/sBullet.yy",},},
     {"id":{"name":"sCrate","path":"sprites/sCrate/sCrate.yy",},},
+    {"id":{"name":"sDust","path":"sprites/sDust/sDust.yy",},},
     {"id":{"name":"sEnemy","path":"sprites/sEnemy/sEnemy.yy",},},
     {"id":{"name":"sEnemyA","path":"sprites/sEnemyA/sEnemyA.yy",},},
     {"id":{"name":"sEnemyD","path":"sprites/sEnemyD/sEnemyD.yy",},},
