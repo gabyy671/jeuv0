@@ -1,5 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+if (!place_meeting(x, y + 1, oWall)) && (jumping_state == JUMPING_STATE.GROUNDED){
+	jumping_state = JUMPING_STATE.FALLING;
+}
+
+
+
 switch (jumping_state) {
 	
     case JUMPING_STATE.GROUNDED:
@@ -8,7 +15,7 @@ switch (jumping_state) {
 
     case JUMPING_STATE.JUMPING:
         // Code pour l'état de saut
-        if (jumping_frame < 20) {
+        if (jumping_frame < 15) {
             if (!place_meeting(x, y - jumping_speed, oWall)) {
                 y -= jumping_speed;
                 jumping_frame += 1;
@@ -19,7 +26,7 @@ switch (jumping_state) {
             }
 			
         } else {
-            jumping_state = JUMPING_STATE.TOP;
+            jumping_state = JUMPING_STATE.FALLING;
             jumping_frame = 0;
         }
         break;
