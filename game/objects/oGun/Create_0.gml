@@ -6,3 +6,4 @@ recoil = 0;
 
 controller_angle = 0;
 
+if (global.pacifist) instance_destroy();
