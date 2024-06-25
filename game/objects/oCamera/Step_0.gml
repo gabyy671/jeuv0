@@ -31,6 +31,7 @@ shake_remain = max(0, shake_remain-((1/shake_lenght)*shake_magnitude));
 
 camera_set_view_pos(cam, x - view_w_half, y - view_h_half);
 
+
 if (layer_exists(mountains_layer)){
 	// the less we divide x by, the more depth it feels in the background.
 	layer_x(mountains_layer, x/1.5);

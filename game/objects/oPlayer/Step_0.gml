@@ -36,7 +36,7 @@ if(hascontrol){
 	}
 	
 	if (gamepad_button_check(0, gp_face3)){
-	key_action = 1;
+		key_action = 1;
 	}
 /*
 	if (gamepad_button_check(0, gp_face3)){
