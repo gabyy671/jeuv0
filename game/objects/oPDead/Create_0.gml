@@ -12,3 +12,4 @@ ScreenShake(12, 60);
 game_set_speed(30, gamespeed_fps);
 
 with(oCamera) follow = other.id;
+audio_play_sound(snDeath, 10, false);

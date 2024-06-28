@@ -2,4 +2,4 @@
 // You can write your code in this editor
 
 with (other) instance_destroy();
-KillPlayer();
+if (!global.pacifist) && (hascontrol) KillPlayer();

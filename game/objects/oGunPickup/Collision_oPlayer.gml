@@ -1,9 +1,11 @@
-/// @description Insert description here
+/// @description Collision with oPlayer
 // You can write your code in this editor
 if (!other.has_gun){
 	
 	global.pacifist = false;
-	instance_create_layer(oPlayer.x, oPlayer.y, layer, oGun);
+	iPlayer = other;
+	with(instance_create_layer(oPlayer.x, oPlayer.y, layer, oGun)){
+		target = other.iPlayer;
+	}
 	instance_destroy();
-
 }

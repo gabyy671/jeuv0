@@ -1,8 +1,8 @@
-x = oPlayer.x;
-y = oPlayer.y+10;
+x = target.x;
+y = target.y+10;
 
 
-if (oPlayer.controller == 0){
+if (target.controller == 0){
 	image_angle = point_direction(x, y, mouse_x, mouse_y);
 }
 

@@ -25,6 +25,7 @@ if (nearest_player != noone) {
 		
 		if (!collision_line(x, y, nearest_player.x, nearest_player.y, oWall, false, false)){
 			
+			audio_play_sound(snShot, 5, false);
 			with(instance_create_layer(x, y, "Bullets", oEbullet)){
 			spd = 10;
 			direction = other.image_angle + random_range(-3, 3);

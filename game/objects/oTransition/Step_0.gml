@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 if (mode != TRANS_MOD.OFF){
-	
+	if (instance_exists(oPlayer)) oPlayer.hascontrol = false;
 	if(mode == TRANS_MOD.INTRO){
 		percent = max(0,percent - max((percent/10), 0.005));	
 	}
@@ -45,3 +45,4 @@ if (mode != TRANS_MOD.OFF){
 	}
 	
 }
+else if (instance_exists(oPlayer)) oPlayer.hascontrol = true;

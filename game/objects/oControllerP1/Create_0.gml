@@ -1,4 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-//text =  "hellow rold";
+if(global.bis){
+
+
+
+	instance_destroy();		
+}

@@ -1,3 +1,3 @@
 /// @description die
 
-if (!global.pacifist) KillPlayer();
+if (!global.pacifist) && (hascontrol) KillPlayer();

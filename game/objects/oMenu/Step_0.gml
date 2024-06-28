@@ -19,6 +19,7 @@ if (menu_control){
 		menu_committed = menu_cursor;
 		ScreenShake(4, 30);
 		menu_control = false;
+		audio_play_sound(snDeath, 10, false);
 	}
 	
 	var mouse_y_gui = device_mouse_y_to_gui(0);
@@ -47,6 +48,8 @@ if (menu_x > gui_width + 150) && (menu_committed != -1){
 				var target = file_text_read_real(file);
 				global.kills = file_text_read_real(file);
 				global.pacifist = file_text_read_real(file);
+				global.nbPlayer = file_text_read_real(file);
+				global.bis = file_text_read_real(file);
 				file_text_close(file);
 				SlideTransition(TRANS_MOD.GOTO, target);
 			}

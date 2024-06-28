@@ -5,9 +5,18 @@
 #macro RES_H 768;
 display_set_gui_size(RES_W, RES_H);
 */
+
+enum JUMPING_STATE{
+    GROUNDED,
+    JUMPING,
+    FALLING,
+	FAST_FALLING,
+    TOP
+}
+
 global.kills = 0;
 global.killsthisroom = 0;
 global.pacifist = true;
-
+global.nbPlayer = 1;
+global.bis = false;
 killtextscale = 1;
-

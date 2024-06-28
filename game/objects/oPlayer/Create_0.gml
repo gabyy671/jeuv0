@@ -1,25 +1,35 @@
-enum JUMPING_STATE{
-    GROUNDED,
-    JUMPING,
-    FALLING,
-	FAST_FALLING,
-    TOP
+/*
+oController * activeController;
+var primaryController = oControllerP1;
+var secondaryController = oControllerP1_BIS;
+
+if (instance_exists(primaryController)) {
+    activeController = primaryController;
+} else if (instance_exists(secondaryController)) {
+    activeController = secondaryController;
+} else {
+    instance_destroy();
 }
+*/
 
-jumping_state = JUMPING_STATE.FALLING;
+if (instance_exists(primary_controller)) {
+    active_controller = primary_controller;
+} else if (instance_exists(secondary_controller)){
+	active_controller = secondary_controller;
+}
+else instance_destroy();
+/*
+ControllerP1 / keyboard controller0
+ControllerP2	controller1
+ControllerP3	controller2
+ControllerP4	controller3
 
-jumping_frame = 0;
+if (global.bis)
+instance create(ControllerP1_BIS);
+instance_destroy();
 
-hsp = 0;
-vsp = 0;
-grv = 0.6;
-walksp = 6;
-jumping_speed = 8;
-falling_speed = 8;
-
-controller = 0;
-keyboard = 0;
-hascontrol = true;
-
-can_jump = 0;
-dustCd = 0;
+ControllerP1_BIS	keyboard
+ControllerP2_BIS	controller0
+ControllerP3_BIS	controller1
+ControllerP4_BIS	controller2
+*/

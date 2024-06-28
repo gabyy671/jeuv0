@@ -7,3 +7,4 @@ done = 0;
 image_speed = 0;
 
 ScreenShake(8, 20);
+audio_play_sound(snDeath, 10, false);
