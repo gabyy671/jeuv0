@@ -12,12 +12,7 @@ if (instance_exists(primaryController)) {
 }
 */
 
-if (instance_exists(primary_controller)) {
-    active_controller = primary_controller;
-} else if (instance_exists(secondary_controller)){
-	active_controller = secondary_controller;
-}
-else instance_destroy();
+
 /*
 ControllerP1 / keyboard controller0
 ControllerP2	controller1

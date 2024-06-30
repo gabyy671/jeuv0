@@ -18,5 +18,5 @@ global.kills = 0;
 global.killsthisroom = 0;
 global.pacifist = true;
 global.nbPlayer = 1;
-global.bis = false;
+global.bis = true;
 killtextscale = 1;

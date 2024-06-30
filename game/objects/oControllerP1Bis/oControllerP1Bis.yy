@@ -1,11 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"oControllerP2",
+  "%Name":"oControllerP1Bis",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":1,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oControllerP2",
+  "name":"oControllerP1Bis",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -33,9 +35,6 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":null,
-  "spriteMaskId":{
-    "name":"sPlayer",
-    "path":"sprites/sPlayer/sPlayer.yy",
-  },
+  "spriteMaskId":null,
   "visible":false,
 }

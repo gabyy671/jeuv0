@@ -21,6 +21,7 @@
     {"name":"oCamera","order":6,"path":"objects/oCamera/oCamera.yy",},
     {"name":"oController","order":23,"path":"objects/oController/oController.yy",},
     {"name":"oControllerP1","order":24,"path":"objects/oControllerP1/oControllerP1.yy",},
+    {"name":"oControllerP1Bis","order":28,"path":"objects/oControllerP1Bis/oControllerP1Bis.yy",},
     {"name":"oControllerP2","order":27,"path":"objects/oControllerP2/oControllerP2.yy",},
     {"name":"oCrate","order":15,"path":"objects/oCrate/oCrate.yy",},
     {"name":"oDead","order":5,"path":"objects/oDead/oDead.yy",},

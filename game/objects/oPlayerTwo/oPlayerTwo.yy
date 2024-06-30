@@ -5,7 +5,7 @@
   "managed":true,
   "name":"oPlayerTwo",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"propertyId":{"name":"primary_controller","path":"objects/oPlayer/oPlayer.yy",},"resource":{"name":"oControllerP2","path":"objects/oControllerP2/oControllerP2.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"oControllerP2",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"propertyId":{"name":"active_controller","path":"objects/oPlayer/oPlayer.yy",},"resource":{"name":"oControllerP2","path":"objects/oControllerP2/oControllerP2.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"oControllerP2",},
   ],
   "parent":{
     "name":"Objects",

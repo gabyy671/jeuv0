@@ -1,7 +1,9 @@
 {
   "$GMObject":"",
   "%Name":"oPlayerOne",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"oPlayerOne",
   "overriddenProperties":[],
@@ -26,7 +28,10 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v1","%Name":"primary_controller","filters":[],"listItems":[],"multiselect":false,"name":"primary_controller","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"oControllerP1","path":"objects/oControllerP1/oControllerP1.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"oControllerP1","varType":5,},
+    {"$GMObjectProperty":"v1","%Name":"secondary_controller","filters":[],"listItems":[],"multiselect":false,"name":"secondary_controller","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"oControllerP1Bis","path":"objects/oControllerP1Bis/oControllerP1Bis.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"oControllerP1Bis","varType":5,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,

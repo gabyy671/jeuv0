@@ -1,7 +1,7 @@
 /// firing
 // You can write your code in this editor
 
-if ((mouse_check_button(mb_left) || gamepad_button_check(0, gp_shoulderlb))  && (firing_delay < 0)) {
+if (target.key_shoot)  && (firing_delay < 0) {
 	
 	recoil = 4
 	firing_delay = 5;

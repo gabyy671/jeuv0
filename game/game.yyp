@@ -30,7 +30,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.600.0.585",
+    "IDEVersion":"2024.4.1.152",
   },
   "name":"game",
   "resources":[
@@ -40,6 +40,7 @@
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},},
     {"id":{"name":"oController","path":"objects/oController/oController.yy",},},
     {"id":{"name":"oControllerP1","path":"objects/oControllerP1/oControllerP1.yy",},},
+    {"id":{"name":"oControllerP1Bis","path":"objects/oControllerP1Bis/oControllerP1Bis.yy",},},
     {"id":{"name":"oControllerP2","path":"objects/oControllerP2/oControllerP2.yy",},},
     {"id":{"name":"oCrate","path":"objects/oCrate/oCrate.yy",},},
     {"id":{"name":"oDead","path":"objects/oDead/oDead.yy",},},

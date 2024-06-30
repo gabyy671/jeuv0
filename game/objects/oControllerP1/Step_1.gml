@@ -1,21 +1,21 @@
 /// @description Insert description here
 // You can write your code in this editor
-/*
+
 key_left = keyboard_check(vk_left) || keyboard_check(ord("Q"));
 key_right = keyboard_check(vk_right) || keyboard_check(ord("D"));
 key_jump = keyboard_check_pressed(vk_space) || keyboard_check_pressed(ord("Z")) || keyboard_check_pressed(vk_up);
 key_down = keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S"));
 key_action = keyboard_check(ord("E"));
-*/
-key_left = keyboard_check(ord("Q"));
-key_right = keyboard_check(ord("D"));
-key_jump = keyboard_check_pressed(vk_space) || keyboard_check_pressed(ord("Z"));
-key_down = keyboard_check_pressed(ord("S"));
-key_action = keyboard_check(ord("E"));
+
 if (key_left || key_right || key_jump || key_down) {
     keyboard = 1;
     controller = 0;    
 }
+
+if (gamepad_button_check(irl_controller_id, gp_shoulderlb) || (mouse_check_button(mb_left))){
+	key_shoot = 1;
+} else key_shoot = 0;
+
 
 // contrôleur mouvements
 if (abs(gamepad_axis_value(0, gp_axislh)) > 0.1) {
@@ -35,4 +35,4 @@ if (gamepad_button_check(0, gp_face3)) {
     key_action = 1;
 	controller = 1;
 }
-if (controller ==1) keyboard = 0;
+if (controller == 1) keyboard = 0;

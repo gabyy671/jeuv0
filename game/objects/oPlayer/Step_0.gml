@@ -14,7 +14,8 @@ if(hascontrol){
 	key_jump = active_controller.key_jump;
 	key_down = active_controller.key_down;
 	key_action = active_controller.key_action;
-
+	key_shoot = active_controller.key_shoot;
+	
 	keyboard = active_controller.keyboard;
 	controller = active_controller.controller;
 
