@@ -1,3 +1,5 @@
+if (!instance_exists(active_controller)) instance_destroy();
+
 /*
 oController * activeController;
 var primaryController = oControllerP1;

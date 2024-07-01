@@ -20,6 +20,9 @@ menu_committed = -1;
 
 menu_control = true;
 
+menu[5] = "New Game 4p";
+menu[4] = "New Game 3p";
+menu[3] = "New Game 2p";
 menu[2] = "New Game";
 menu[1] = "Continue";
 menu[0] = "Quit";

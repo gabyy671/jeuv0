@@ -38,7 +38,21 @@ if (menu_control){
 
 if (menu_x > gui_width + 150) && (menu_committed != -1){
 	switch(menu_committed){
-		case 2: SlideTransition(TRANS_MOD.NEXT); break;
+		case 5: {
+			global.nbPlayer = 4;
+			SlideTransition(TRANS_MOD.NEXT); 
+		}break;
+		case 4: {
+			global.nbPlayer = 3;
+			SlideTransition(TRANS_MOD.NEXT); 
+		}break;
+		case 3: {
+			global.nbPlayer = 2;
+			SlideTransition(TRANS_MOD.NEXT); 
+		}break;
+		case 2: {
+			SlideTransition(TRANS_MOD.NEXT); 
+		}break;
 		case 1: {
 			if(!file_exists(SAVEFILE)){
 				SlideTransition(TRANS_MOD.NEXT);

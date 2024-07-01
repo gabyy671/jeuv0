@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"oPlayerTwo",
+  "%Name":"oPlayerThree",
   "eventList":[],
   "managed":true,
-  "name":"oPlayerTwo",
+  "name":"oPlayerThree",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"propertyId":{"name":"active_controller","path":"objects/oPlayer/oPlayer.yy",},"resource":{"name":"oControllerP2","path":"objects/oControllerP2/oControllerP2.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"oControllerP2",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"propertyId":{"name":"inventory","path":"objects/oPlayer/oPlayer.yy",},"resource":{"name":"oInventoryP2","path":"objects/oInventoryP2/oInventoryP2.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"oInventoryP2",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"propertyId":{"name":"active_controller","path":"objects/oPlayer/oPlayer.yy",},"resource":{"name":"oControllerP3","path":"objects/oControllerP3/oControllerP3.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"oControllerP3",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"propertyId":{"name":"inventory","path":"objects/oPlayer/oPlayer.yy",},"resource":{"name":"oInventoryP3","path":"objects/oInventoryP3/oInventoryP3.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"oInventoryP3",},
   ],
   "parent":{
     "name":"Objects",

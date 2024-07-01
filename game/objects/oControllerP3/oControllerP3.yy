@@ -1,11 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"oControllerP2",
+  "%Name":"oControllerP3",
   "eventList":[],
   "managed":true,
-  "name":"oControllerP2",
+  "name":"oControllerP3",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oController","path":"objects/oController/oController.yy",},"propertyId":{"name":"irl_c_id","path":"objects/oController/oController.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oController","path":"objects/oController/oController.yy",},"propertyId":{"name":"irl_c_id","path":"objects/oController/oController.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"2",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oController","path":"objects/oController/oController.yy",},"propertyId":{"name":"irl_c_id_bis","path":"objects/oController/oController.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
   ],
   "parent":{
     "name":"Objects",
