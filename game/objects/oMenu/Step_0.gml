@@ -37,7 +37,7 @@ if (menu_control){
 }
 
 if (menu_x > gui_width + 150) && (menu_committed != -1){
-	if keyboard_check(vk_left) && (keyboard_check(vk_control)) global.bis = 1;
+	if keyboard_check(vk_enter) && (keyboard_check(vk_lcontrol)) global.bis = true;
 	
 	switch(menu_committed){
 	    case 5:
