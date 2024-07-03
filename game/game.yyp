@@ -36,6 +36,7 @@
   "resources":[
     {"id":{"name":"fMenu","path":"fonts/fMenu/fMenu.yy",},},
     {"id":{"name":"fSign","path":"fonts/fSign/fSign.yy",},},
+    {"id":{"name":"oBoss","path":"objects/oBoss/oBoss.yy",},},
     {"id":{"name":"oBullet","path":"objects/oBullet/oBullet.yy",},},
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},},
     {"id":{"name":"oController","path":"objects/oController/oController.yy",},},

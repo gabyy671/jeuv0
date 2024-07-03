@@ -7,6 +7,7 @@
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"propertyId":{"name":"active_controller","path":"objects/oPlayer/oPlayer.yy",},"resource":{"name":"oControllerP2","path":"objects/oControllerP2/oControllerP2.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"oControllerP2",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"propertyId":{"name":"inventory","path":"objects/oPlayer/oPlayer.yy",},"resource":{"name":"oInventoryP2","path":"objects/oInventoryP2/oInventoryP2.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"oInventoryP2",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"propertyId":{"name":"number_player","path":"objects/oPlayer/oPlayer.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"2",},
   ],
   "parent":{
     "name":"Objects",

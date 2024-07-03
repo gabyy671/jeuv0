@@ -17,7 +17,10 @@ if (mode != TRANS_MOD.OFF){
 		switch(mode){
 		
 			case TRANS_MOD.INTRO:
-			{
+			{	
+				with(oEnemy){
+					is_active = true;
+				}
 				mode = TRANS_MOD.OFF;
 				break;
 			}

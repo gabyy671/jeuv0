@@ -1,10 +1,10 @@
 /// firing
 // You can write your code in this editor
 
-if (target.key_shoot)  && (firing_delay < 0) {
+if (target.key_shoot)  && (firing_delay <= 0) {
 	
-	recoil = 4
-	firing_delay = 5;
+	recoil = 6
+	firing_delay = 20;
 	
 	ScreenShake(2, 10);
 	audio_play_sound(snShot, 5, false);
@@ -20,7 +20,7 @@ if (target.key_shoot)  && (firing_delay < 0) {
 	}
 	
 	with (target){
-		gunkick_x = lengthdir_x(1.5, other.image_angle-180);
+		gunkick_x = lengthdir_x(1.5, other.image_angle - 180);
 	}
 }
 

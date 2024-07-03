@@ -13,7 +13,7 @@ var target_y = y;
 // Nom de l'objet dont on veut trouver l'instance la plus proche
 var nearest_player = instance_nearest(target_x, target_y, oPlayer);
 
-if (nearest_player != noone) {
+if (nearest_player != noone) && (owner.is_active){
 	
 	if (nearest_player.x < x) image_yscale = - image_yscale;
 	if (point_distance(nearest_player.x, nearest_player.y, x, y) < 600){

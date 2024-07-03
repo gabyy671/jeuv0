@@ -4,17 +4,17 @@
 menu_x += (menu_x_target - menu_x) / menu_speed;
 
 if (menu_control){
-	if(keyboard_check_pressed(vk_up)){
+	if(keyboard_check_pressed(vk_up)) || (gamepad_axis_value(0, gp_axislv) < -0.1) {
 		menu_cursor++;
 		if (menu_cursor >= menu_items) menu_cursor = 0;
 	}
 	
-	if(keyboard_check_pressed(vk_down)){
+	if(keyboard_check_pressed(vk_down)) || (gamepad_axis_value(0, gp_axislv) > 0.1) {
 		menu_cursor--;
 		if (menu_cursor < 0) menu_cursor = menu_items-1;
 	}
 	
-	if(keyboard_check_pressed(vk_enter)){
+	if(keyboard_check_pressed(vk_enter)) || (gamepad_button_check(0, gp_face2)) {
 		menu_x_target = gui_width + 200;
 		menu_committed = menu_cursor;
 		ScreenShake(4, 30);
@@ -37,40 +37,38 @@ if (menu_control){
 }
 
 if (menu_x > gui_width + 150) && (menu_committed != -1){
-	switch(menu_committed){
-		case 5: {
-			global.nbPlayer = 4;
-			SlideTransition(TRANS_MOD.NEXT); 
-		}break;
-		case 4: {
-			global.nbPlayer = 3;
-			SlideTransition(TRANS_MOD.NEXT); 
-		}break;
-		case 3: {
-			global.nbPlayer = 2;
-			SlideTransition(TRANS_MOD.NEXT); 
-		}break;
-		case 2: {
-			SlideTransition(TRANS_MOD.NEXT); 
-		}break;
-		case 1: {
-			if(!file_exists(SAVEFILE)){
-				SlideTransition(TRANS_MOD.NEXT);
-			}
-			else{
-				var file = file_text_open_read(SAVEFILE);
-				var target = file_text_read_real(file);
-				global.kills = file_text_read_real(file);
-				global.pacifist = file_text_read_real(file);
-				global.nbPlayer = file_text_read_real(file);
-				global.bis = file_text_read_real(file);
-				file_text_close(file);
-				SlideTransition(TRANS_MOD.GOTO, target);
-			}
-
-		}
-		break;
-		case 0: game_end(); break;
+	if keyboard_check(vk_left) && (keyboard_check(vk_control)) global.bis = 1;
 	
+	switch(menu_committed){
+	    case 5:
+	    case 4:
+	    case 3:
+	    case 2: {
+	        global.nbPlayer = menu_committed - 1;
+	        global.fromSave = 0;
+	        SlideTransition(TRANS_MOD.NEXT); 
+	    } break;
+
+	    case 1: {
+	        if (!file_exists(SAVEFILE)) {
+	            global.fromSave = 0;
+	            SlideTransition(TRANS_MOD.NEXT);
+	        } 
+			else {
+	            var file = file_text_open_read(SAVEFILE);
+	            var target = file_text_read_real(file);
+	            global.kills = file_text_read_real(file);
+	            global.pacifist = file_text_read_real(file);
+	            global.nbPlayer = file_text_read_real(file);
+	            //global.bis = file_text_read_real(file);
+	            file_text_close(file);
+	            global.fromSave = 1;
+	            SlideTransition(TRANS_MOD.GOTO, target);
+	        }
+	    } break;
+
+	    case 0: {
+	        game_end(); 
+	    } break;
 	}
 }

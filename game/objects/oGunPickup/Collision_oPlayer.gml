@@ -8,5 +8,6 @@ if (!other.has_gun){
 		target = other.iPlayer;
 	}
 	iPlayer.inventory.has_gun = 1;
+	iPlayer.has_gun = 1;
 	instance_destroy();
 }

@@ -11,7 +11,7 @@
   "managed":true,
   "name":"oEnemy",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pShootable","path":"objects/pShootable/pShootable.yy",},"propertyId":{"name":"hp","path":"objects/pShootable/pShootable.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"4",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pShootable","path":"objects/pShootable/pShootable.yy",},"propertyId":{"name":"hp","path":"objects/pShootable/pShootable.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"2",},
   ],
   "parent":{
     "name":"Objects",
@@ -53,6 +53,7 @@
     {"$GMObjectProperty":"v1","%Name":"afraid_of_heights","filters":[],"listItems":[],"multiselect":false,"name":"afraid_of_heights","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"True","varType":3,},
     {"$GMObjectProperty":"v1","%Name":"grounded","filters":[],"listItems":[],"multiselect":false,"name":"grounded","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
     {"$GMObjectProperty":"v1","%Name":"hasweapon","filters":[],"listItems":[],"multiselect":false,"name":"hasweapon","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
+    {"$GMObjectProperty":"v1","%Name":"is_active","filters":[],"listItems":[],"multiselect":false,"name":"is_active","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

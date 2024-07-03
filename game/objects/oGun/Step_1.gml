@@ -7,20 +7,19 @@ if (target.controller == 0){
 }
 
 else{
-	var controller_h = gamepad_axis_value(0,gp_axisrh);
-	var controller_v = gamepad_axis_value(0,gp_axisrv);
+	var controller_h = gamepad_axis_value(target.active_controller.irl_controller_id, gp_axisrh);
+	var controller_v = gamepad_axis_value(target.active_controller.irl_controller_id, gp_axisrv);
 	
 	if (abs(controller_h) > 0.1) || (abs(controller_v) > 0.1){
 	
 		controller_angle = point_direction(0, 0, controller_h, controller_v);
 	}
-	image_angle = controller_angle;
-	
+	image_angle = controller_angle;	
 }
 
 
-firing_delay -=1;
-recoil = max(0, recoil-1);
+firing_delay = max(0, firing_delay - 1);
+recoil = max(0, recoil - 1);
 
 if ((image_angle > 90) && (image_angle < 270)){
 	image_yscale = -1;
