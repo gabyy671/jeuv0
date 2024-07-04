@@ -3,13 +3,28 @@
 
 menu_x += (menu_x_target - menu_x) / menu_speed;
 
+var axis_value = gamepad_axis_value(0, gp_axislv);
+ctr_up = false;
+ctr_down = false;
+
+if (axis_value < -0.1 && !was_commited_ctr) {
+    ctr_up = true;
+    was_commited_ctr = true;
+} else if (axis_value > 0.1 && !was_commited_ctr) {
+    ctr_down = true;
+    was_commited_ctr = true;
+} else if (abs(axis_value) <= 0.1) {
+    was_commited_ctr = false;
+}
+
+
 if (menu_control){
-	if(keyboard_check_pressed(vk_up)) || (gamepad_axis_value(0, gp_axislv) < -0.1) {
+	if(keyboard_check_pressed(vk_up)) || (ctr_up) {
 		menu_cursor++;
 		if (menu_cursor >= menu_items) menu_cursor = 0;
 	}
 	
-	if(keyboard_check_pressed(vk_down)) || (gamepad_axis_value(0, gp_axislv) > 0.1) {
+	if(keyboard_check_pressed(vk_down)) || (ctr_down) {
 		menu_cursor--;
 		if (menu_cursor < 0) menu_cursor = menu_items-1;
 	}

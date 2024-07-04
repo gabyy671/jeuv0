@@ -3,5 +3,5 @@
 
 if (global.pacifist) instance_destroy();
 
-countdownnb = 90;
+
 countdown = countdownnb;

@@ -18,8 +18,8 @@ else{
 }
 
 
-firing_delay = max(0, firing_delay - 1);
-recoil = max(0, recoil - 1);
+active_firing_delay = max(0, active_firing_delay - 1);
+active_recoil = max(0, active_recoil - 1);
 
 if ((image_angle > 90) && (image_angle < 270)){
 	image_yscale = -1;

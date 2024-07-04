@@ -5,7 +5,8 @@ if (hasweapon){
 	
 	mygun = instance_create_layer(x, y, "Gun", oEgun);
 	with(mygun){
-		owner = other.id;	
+		owner = other.id;
+		size = other.size;
 	}	
 }
 else mygun = noone;
