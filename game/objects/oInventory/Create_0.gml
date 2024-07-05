@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (room = rEnding) instance_destroy();
+
 if ((instance_number(object_index) > 1) || (number_inv > global.nbPlayer)) instance_destroy();
 
 if (global.fromSave){

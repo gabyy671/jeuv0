@@ -7,7 +7,13 @@ key_right = keyboard_check(vk_right);
 key_jump = keyboard_check_pressed(vk_space);
 key_down = keyboard_check(vk_down);
 */
-if(hascontrol){
+/*
+if (dmg_boost_x != 0){
+	hascontrol = false;
+} else hascontrol = true;
+*/
+
+if(hascontrol) && (hitstun == 0){
 	key_left = active_controller.key_left;
 	key_right = active_controller.key_right;
 	key_jump = active_controller.key_jump;
@@ -40,15 +46,32 @@ if (hsp != 0) && (dustCd < 0) && (jumping_state == JUMPING_STATE.GROUNDED){
 }
 
 // checking for collision (h)
-if (place_meeting(x + hsp, y, oWall))
+var x_mov;
+x_mov = hsp + gunkick_x + dmg_boost_x;
+
+
+if (place_meeting(x + x_mov, y, oWall))
 {
-	while(!place_meeting(x + sign(hsp), y ,oWall))
+	while(!place_meeting(x + sign(x_mov), y ,oWall))
 	{
-		x = x + sign(hsp);	
+		x = x + sign(x_mov);	
 	}
-	hsp = 0;
+	x_mov = 0;
 }
 
+x = x + x_mov;
+
+gunkick_x = 0;
+if (dmg_boost_x > 0) {
+    dmg_boost_x = max(0, dmg_boost_x - 1);
+} else if (dmg_boost_x < 0) {
+    dmg_boost_x = min(0, dmg_boost_x + 1);
+}
+
+hitstun = max(hitstun -1, 0);
+//hascontrol = (dmg_boost_x == 0);
+
+/*
 if (place_meeting(x + hsp + gunkick_x, y, oWall))
 {
 	while(!place_meeting(x + sign(gunkick_x), y ,oWall))
@@ -62,18 +85,18 @@ x = (x + hsp) + gunkick_x;
 gunkick_x = 0;
 
 
-
-//jump
-
-/*
-old jump mecanic: 
-
-if(place_meeting(x, y+1, oWall)) && (key_jump) {
-
-	vsp = vsp - 13;
+if (place_meeting(x + dmg_boost_x, y, oWall)){
+	while(!place_meeting(x + sign(dmg_boost_x), y ,oWall))
+	{
+		x = x + sign(dmg_boost_x);	
+	}
+	dmg_boost_x = 0;
+}
+else {
+	x = x + dmg_boost_x;
+	dmg_boost_x = 0;
 }
 */
-
 // new jump mecanic
 can_jump --;
 if(can_jump) && (key_jump){

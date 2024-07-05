@@ -45,7 +45,7 @@ switch (jumping_state) {
             }
 
             jumping_state = JUMPING_STATE.GROUNDED;
-			audio_play_sound(snLanding, 7, false);
+			audio_play_sound(snLanding, 1, false);
 			repeat(5){			//bbox means collision box
 				with(instance_create_layer(x, bbox_bottom, "Bullets", oDust)) {
 					vsp = 0;
@@ -72,7 +72,7 @@ switch (jumping_state) {
                 y += 1;
             }
             jumping_state = JUMPING_STATE.GROUNDED;
-			audio_play_sound(snLanding, 7, false);
+			audio_play_sound(snLanding, 1, false);
 			repeat(5){			//bbox means collision box
 				with(instance_create_layer(x, bbox_bottom, "Bullets", oDust)) {
 					vsp = 0;
@@ -81,3 +81,4 @@ switch (jumping_state) {
         }
         break;
 }
+iFrames = max(0, iFrames - 1);

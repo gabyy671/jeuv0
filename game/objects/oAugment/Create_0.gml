@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 image_speed = 0;
-sprite_index = sAugment;
+//sprite_index = sAugment;
 switch (type_augment) {
 	    case 1:
 			image_index = 0;

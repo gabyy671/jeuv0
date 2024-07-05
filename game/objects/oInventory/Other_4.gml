@@ -1,5 +1,6 @@
 /// @description autosave inventory
 // You can write your code in this editor
+if (room = rEnding) instance_destroy();
 
 if (room != rOne){
 	var file_name = "Save_inv_P" + string(number_inv) + ".sav";
