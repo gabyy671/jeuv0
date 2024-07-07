@@ -1,15 +1,15 @@
 /// @description autosave inventory
 // You can write your code in this editor
-if (room = rEnding) instance_destroy();
+if (room == rEnding) instance_destroy();
 
-if (room != rOne){
+if (room != rOne) && (room != rEnding) {
 	var file_name = "Save_inv_P" + string(number_inv) + ".sav";
 	if(file_exists(file_name)) file_delete(file_name);
 
 	var file = file_text_open_write(file_name);
 		file_text_write_real(file, has_gun);
 		file_text_write_real(file, dmg);
-		file_text_write_real(file, firing_delay);
+		file_text_write_real(file, firing_delay); 
 		file_text_write_real(file, bullet_spd);
 		file_text_write_real(file, spread);
 		file_text_close(file);

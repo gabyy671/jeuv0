@@ -7,7 +7,7 @@ function KillPlayer(){
 		hp --;
 		iFrames = 30
 		direction = point_direction(other.x, other.y, x, y);
-		dmg_boost_x = lengthdir_x(8, direction);
+		dmg_boost_x = lengthdir_x(16, direction);
 		hitstun = dmg_boost_x /2;
 		flash = 5;
 		audio_play_sound(snDeath, 5, false);
