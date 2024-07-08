@@ -1,3 +1,3 @@
 /// @description die
 
-if (!global.pacifist) && (hascontrol) KillPlayer();
+if (!global.pacifist) && (hascontrol)  && (iFrames <= 0) DmgPlayer();

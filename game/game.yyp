@@ -30,7 +30,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.6.0.157",
+    "IDEVersion":"2024.600.0.585",
   },
   "name":"game",
   "resources":[
@@ -78,12 +78,14 @@
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},},
     {"id":{"name":"pShootable","path":"objects/pShootable/pShootable.yy",},},
     {"id":{"name":"rAugment","path":"rooms/rAugment/rAugment.yy",},},
+    {"id":{"name":"rAugment2","path":"rooms/rAugment2/rAugment2.yy",},},
     {"id":{"name":"rEnding","path":"rooms/rEnding/rEnding.yy",},},
     {"id":{"name":"rMenu","path":"rooms/rMenu/rMenu.yy",},},
     {"id":{"name":"rOne","path":"rooms/rOne/rOne.yy",},},
     {"id":{"name":"rThree","path":"rooms/rThree/rThree.yy",},},
     {"id":{"name":"rTwo","path":"rooms/rTwo/rTwo.yy",},},
     {"id":{"name":"rTwoOld","path":"rooms/rTwoOld/rTwoOld.yy",},},
+    {"id":{"name":"DmgPlayer","path":"scripts/DmgPlayer/DmgPlayer.yy",},},
     {"id":{"name":"DrawSetText","path":"scripts/DrawSetText/DrawSetText.yy",},},
     {"id":{"name":"KillPlayer","path":"scripts/KillPlayer/KillPlayer.yy",},},
     {"id":{"name":"ScreenShake","path":"scripts/ScreenShake/ScreenShake.yy",},},
@@ -134,6 +136,7 @@
     {"roomId":{"name":"rEnding","path":"rooms/rEnding/rEnding.yy",},},
     {"roomId":{"name":"rTwoOld","path":"rooms/rTwoOld/rTwoOld.yy",},},
     {"roomId":{"name":"rAugment","path":"rooms/rAugment/rAugment.yy",},},
+    {"roomId":{"name":"rAugment2","path":"rooms/rAugment2/rAugment2.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

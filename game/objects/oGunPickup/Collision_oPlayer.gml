@@ -1,6 +1,6 @@
 /// @description Collision with oPlayer
 // You can write your code in this editor
-if (!other.has_gun){
+if (!other.inventory.has_gun){
 	
 	global.pacifist = false;
 	iPlayer = other;

@@ -2,14 +2,13 @@
 // You can write your code in this editor
 
 with(other){
-	// Supposons que la variable s'appelle "variable"
 	switch (other.type_augment) {
 	    case 1:
 			inventory.dmg++;
 	        break;
 
 	    case 2:
-			inventory.bullet_spd += 10;
+			inventory.bullet_spd += 20;
 	        break;
 
 	    case 3:
