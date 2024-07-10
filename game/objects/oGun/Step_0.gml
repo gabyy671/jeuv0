@@ -21,6 +21,7 @@ if (target.key_shoot)  && (active_firing_delay <= 0) {
 	
 	with (target){
 		gunkick_x = lengthdir_x(1.5, other.image_angle - 180);
+		gunkick_y = lengthdir_y(10, other.image_angle - 180);
 	}
 }
 

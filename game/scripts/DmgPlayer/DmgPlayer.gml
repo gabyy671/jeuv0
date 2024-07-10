@@ -11,6 +11,7 @@ function DmgPlayer(_damage = 1){
 	iFrames = 30
 	direction = point_direction(other.x, other.y, x, y);
 	dmg_boost_x = lengthdir_x(16, direction);
+	dmg_boost_y = lengthdir_y(16, direction);
 	
 	hitstun = dmg_boost_x / 2;
 	flash = 5;

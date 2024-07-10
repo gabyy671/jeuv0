@@ -67,9 +67,7 @@ x = x + x_mov;
 
 
 
-if (!place_meeting(x, y + 1, oWall)) && (jumping_state == JUMPING_STATE.GROUNDED){
-	jumping_state = JUMPING_STATE.FALLING;
-}
+
 
 var y_mov = 0;
 
@@ -133,25 +131,31 @@ switch (jumping_state) {
         break;
 }
 
-if (place_meeting(x, y + y_mov, oWall)) && (jumping_state != JUMPING_STATE.GROUNDED)
+y_mov  = y_mov + gunkick_y + dmg_boost_y;
+
+if (place_meeting(x, y + y_mov, oWall)) //&& (jumping_state != JUMPING_STATE.GROUNDED)
 {
 	while(!place_meeting(x, y + sign(y_mov), oWall))
 	{
 		y = y + sign(y_mov);	
 	}
 	y_mov = 0;
-	jumping_state = JUMPING_STATE.GROUNDED;
-	audio_play_sound(snLanding, 1, false);
-	repeat(5){			//bbox means collision box
-		with(instance_create_layer(x, bbox_bottom, "Bullets", oDust)) {
-			vsp = 0;
+	if (jumping_state != JUMPING_STATE.GROUNDED){
+		jumping_state = JUMPING_STATE.GROUNDED;
+		audio_play_sound(snLanding, 1, false);
+		repeat(5){			//bbox means collision box
+			with(instance_create_layer(x, bbox_bottom, "Bullets", oDust)) {
+				vsp = 0;
+			}
 		}
 	}
 }
 
 y = y + y_mov;
 
-
+if (!place_meeting(x, y + 1, oWall)) && (jumping_state == JUMPING_STATE.GROUNDED){
+	jumping_state = JUMPING_STATE.FALLING;
+}
 
 
 
@@ -159,9 +163,16 @@ iFrames = max(0, iFrames - 1);
 hitstun = max(0, hitstun -1);
 dustCd  = max(0, dustCd);
 gunkick_x = 0;
+gunkick_y = 0;
 
 if (dmg_boost_x > 0) {
     dmg_boost_x = max(0, dmg_boost_x - 1);
 } else if (dmg_boost_x < 0) {
     dmg_boost_x = min(0, dmg_boost_x + 1);
+}
+
+if (dmg_boost_y > 0) {
+    dmg_boost_y = max(0, dmg_boost_y - 1);
+} else if (dmg_boost_y < 0) {
+    dmg_boost_y = min(0, dmg_boost_y + 1);
 }
