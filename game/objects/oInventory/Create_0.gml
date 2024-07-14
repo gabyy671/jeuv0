@@ -8,12 +8,19 @@ if (global.fromSave){
 	var file_name = "Save_inv_P" + string(number_inv) + ".sav";
 	
 	if (file_exists(file_name)){
+		
 		var file = file_text_open_read(file_name);
 		has_gun = file_text_read_real(file);
 		dmg = file_text_read_real(file);
 		firing_delay = file_text_read_real(file);
 		bullet_spd = file_text_read_real(file);
 		spread = file_text_read_real(file);
+		
+		inv_hp = file_text_read_real(file);
+		inv_walk_spd = file_text_read_real(file);
+		inv_fall_spd = file_text_read_real(file);
+		inv_jump_spd = file_text_read_real(file);
+		
 		file_text_close(file);
 	}
 }

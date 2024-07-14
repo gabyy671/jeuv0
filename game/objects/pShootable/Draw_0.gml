@@ -12,12 +12,12 @@ if (show_hp_bar){
 	
 	//var gui_width = display_get_gui_width();
 	// Define the size of the health bar
-	var healthbar_width = 64;
+	var healthbar_width = 32;
 	var healthbar_height = 8;
 
 	// Calculate the top center position
-	var x1 = x + (healthbar_width / 2);
-	var y1 = y - 10; // 10 pixels from the top of the GUI layer
+	var x1 = x - (healthbar_width / 2);
+	var y1 = y - 40;
 	var x2 = x1 + healthbar_width;
 	var y2 = y1 + healthbar_height;
 

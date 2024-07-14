@@ -7,13 +7,20 @@ if (room != rOne) {
 	if(file_exists(file_name)) file_delete(file_name);
 
 	var file = file_text_open_write(file_name);
+		//stock weapon buff
 		file_text_write_real(file, has_gun);
 		file_text_write_real(file, dmg);
 		file_text_write_real(file, firing_delay); 
 		file_text_write_real(file, bullet_spd);
 		file_text_write_real(file, spread);
-		file_text_close(file);
+		//stock player stats buff
+		file_text_write_real(file, inv_hp);
+		file_text_write_real(file, inv_walk_spd);
+		file_text_write_real(file, inv_fall_spd);
+		file_text_write_real(file, inv_jump_spd);
 		
+		file_text_close(file);
+
 	if (!instance_exists(oAugment)) {
 		//&& (player != has_gun)
 		if (has_gun == 1) {

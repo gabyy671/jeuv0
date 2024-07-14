@@ -18,7 +18,7 @@ var y2 = y1 + healthbar_height;
 draw_healthbar(x1, y1, x2, y2, (hp/max_hp) * 100, c_black, c_red, c_green, 0, true, true);
 */
 
-draw_sprite_ext(sHealthbar, 0, healthbar_x, healthbar_y, scale, scale, 0, c_white, 1);
+draw_sprite_ext(sHealthbar_bg, 0, healthbar_x, healthbar_y, scale, scale, 0, c_white, 1);
 //draw_sprite(sHealthbar_bg, 0, healthbar_x, healthbar_y);
 
 draw_sprite_stretched(sHealthbar, 0, healthbar_x, healthbar_y, (hp/hp_max) * healthbar_width, healthbar_height);
