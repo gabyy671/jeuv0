@@ -53,22 +53,6 @@ x_mov = hsp + gunkick_x + dmg_boost_x;
 
 
 
-//collision (h)
-if (place_meeting(x + x_mov, y, oWall))
-{
-	while(!place_meeting(x + sign(x_mov), y ,oWall))
-	{
-		x = x + sign(x_mov);	
-	}
-	x_mov = 0;
-}
-
-x = x + x_mov;
-
-
-
-
-
 var y_mov = 0;
 
 switch (jumping_state) {
@@ -133,13 +117,28 @@ switch (jumping_state) {
 
 y_mov  = y_mov + gunkick_y + dmg_boost_y;
 
-if (place_meeting(x, y + y_mov, oWall)) //&& (jumping_state != JUMPING_STATE.GROUNDED)
+
+
+//slide
+if (jumping_state = JUMPING_STATE.GROUNDED)
+&& (place_meeting(x, y + abs(x_mov) + 1, oWall))
+&& (y_mov >= 0)
 {
-	while(!place_meeting(x, y + sign(y_mov), oWall))
-	{
-		y = y + sign(y_mov);	
-	}
-	y_mov = 0;
+	y_mov += abs(x_mov)+1;
+}
+
+
+
+var x_col = move_and_collide(x_mov, 0, oWall);
+if (array_length_1d(x_col) > 0) {
+	
+}
+
+
+
+var y_col = move_and_collide(0, y_mov, oWall, abs(y_mov)+1, x_mov, y_mov, x_mov, y_mov);
+if (array_length_1d(y_col) > 0) {
+	
 	if (jumping_state != JUMPING_STATE.GROUNDED){
 		jumping_state = JUMPING_STATE.GROUNDED;
 		audio_play_sound(snLanding, 1, false);
@@ -151,11 +150,25 @@ if (place_meeting(x, y + y_mov, oWall)) //&& (jumping_state != JUMPING_STATE.GRO
 	}
 }
 
-y = y + y_mov;
+
+
+
 
 if (!place_meeting(x, y + 1, oWall)) && (jumping_state == JUMPING_STATE.GROUNDED){
 	jumping_state = JUMPING_STATE.FALLING;
+}/*
+else if ((jumping_state == JUMPING_STATE.FALLING) || (jumping_state == JUMPING_STATE.FAST_FALLING)) && (place_meeting(x, y + 1, oWall)){
+	jumping_state = JUMPING_STATE.GROUNDED;
+	audio_play_sound(snLanding, 1, false);
+	repeat(5){			//bbox means collision box
+		with(instance_create_layer(x, bbox_bottom, "Bullets", oDust)) {
+			vsp = 0;
+		}
+	}
 }
+*/
+
+
 
 
 
