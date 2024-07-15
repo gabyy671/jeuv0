@@ -13,6 +13,7 @@ if (room != rOne) {
 		file_text_write_real(file, firing_delay); 
 		file_text_write_real(file, bullet_spd);
 		file_text_write_real(file, spread);
+		
 		//stock player stats buff
 		file_text_write_real(file, inv_hp);
 		file_text_write_real(file, inv_walk_spd);
@@ -34,3 +35,4 @@ if (room != rOne) {
 		}
 	}
 }
+
