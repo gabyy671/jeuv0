@@ -18,8 +18,28 @@ switch (type_augment) {
 	    case 4:
 	        image_index = 3;
 	        break;
-
+			
+		case 5:
+	        image_index = 4;
+	        break;
+			
+		case 6:
+	        image_index = 5;
+	        break;
+			
+		case 7:
+	        image_index = 6;
+	        break;
+			
+		case 8:
+	        image_index = 7;
+	        break;
+		
+		case 9:
+	        image_index = 8;
+	        break;
+			
 	    default:
-	        // Code pour le cas où la variable n'est pas entre 1 et 4
+	        
 	        break;
 	}

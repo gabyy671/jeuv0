@@ -77,7 +77,7 @@ switch (jumping_state) {
 		sprite_index = sPlayerA;
 		image_index = 0;
 		
-        if (jumping_frame < 15) {
+        if (jumping_frame < jumping_lenght) {
 		
 			y_mov = y_mov - jumping_speed;
 			jumping_frame ++;
@@ -171,12 +171,11 @@ else if ((jumping_state == JUMPING_STATE.FALLING) || (jumping_state == JUMPING_S
 
 
 
-
+gunkick_x = 0;
+gunkick_y = 0;
 iFrames = max(0, iFrames - 1);
 hitstun = max(0, hitstun -1);
 dustCd  = max(0, dustCd);
-gunkick_x = 0;
-gunkick_y = 0;
 
 if (dmg_boost_x > 0) {
     dmg_boost_x = max(0, dmg_boost_x - 1);

@@ -18,9 +18,29 @@ with(other){
 	    case 4:
 	        inventory.spread = max(0, inventory.spread - 2);
 	        break;
+			
+		case 5:
+			inventory.inv_hp ++;	        
+	        break;
+			
+		case 6:
+			inventory.inv_walk_spd += 2;	        
+	        break;
+			
+		case 7:
+	        inventory.inv_fall_spd += 2;
+	        break;
+			
+		case 8:
+	        inventory.inv_jump_spd += 2;
+	        break;
 
+		case 9:
+	        inventory.inv_jump_lgt += 5;
+	        break;
+			
 	    default:
-	        // Code pour le cas où la variable n'est pas entre 1 et 4
+	        
 	        break;
 	}
 	instance_destroy();

@@ -11,6 +11,7 @@ if (global.fromSave){
 		
 		var file = file_text_open_read(file_name);
 		has_gun = file_text_read_real(file);
+		
 		dmg = file_text_read_real(file);
 		firing_delay = file_text_read_real(file);
 		bullet_spd = file_text_read_real(file);

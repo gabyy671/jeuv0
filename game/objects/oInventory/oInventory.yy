@@ -38,6 +38,7 @@
     {"$GMObjectProperty":"v1","%Name":"inv_jump_spd","filters":[],"listItems":[],"multiselect":false,"name":"inv_jump_spd","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
     {"$GMObjectProperty":"v1","%Name":"inv_fall_spd","filters":[],"listItems":[],"multiselect":false,"name":"inv_fall_spd","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
     {"$GMObjectProperty":"v1","%Name":"inv_walk_spd","filters":[],"listItems":[],"multiselect":false,"name":"inv_walk_spd","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
+    {"$GMObjectProperty":"v1","%Name":"inv_jump_lgt","filters":[],"listItems":[],"multiselect":false,"name":"inv_jump_lgt","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
